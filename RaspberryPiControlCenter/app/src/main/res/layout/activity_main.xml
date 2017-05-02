@@ -71,22 +71,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <WebView
-        android:layout_width="325dp"
-        android:layout_height="224dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginBottom="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/startcam"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        android:id="@+id/webViewx"
-        app:layout_constraintHorizontal_bias="0.506"
-        tools:layout_editor_absoluteY="34dp"
-        tools:layout_editor_absoluteX="20dp" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -102,5 +86,32 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.100000024" />
+
+    <WebView
+        android:id="@+id/webViewx"
+        android:layout_width="325dp"
+        android:layout_height="224dp"
+        android:layout_marginBottom="9dp"
+        app:layout_constraintBottom_toTopOf="@+id/startcam"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/dwn"
+        android:layout_width="97dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="DWN"
+        app:layout_constraintBottom_toTopOf="@+id/webViewx"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53" />
 
 </android.support.constraint.ConstraintLayout>
