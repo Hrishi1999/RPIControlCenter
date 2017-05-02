@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>RPI</title>
+</head>
+<p>RPI Control Center</p>
+<script>  
+  function shutdown() {  
+       window.location="x.php?status=checktemp";  
+  }  
+</script> 
+<script>  
+  function shutdown() {  
+       window.location="x.php?status=shutdown";  
+  }  
+</script> 
+<script>  
+  function restart() {  
+       window.location="x.php?status=restart";  
+  }  
+</script> 
+<script>  
+  function stopcam() {  
+       window.location="x.php?status=stopcam";  
+  }  
+</script> 
+<script>  
+  function startcam() {  
+       window.location="x.php?status=startcam";  
+  }  
+</script>
+<input type="button" id="temp"  value="Check Temp" onClick="checktemp()"/> 
+<input type="button" id="restart"  value="Reboot" onClick="restart()"/> 
+<input type="button" id="shutdown"  value="Shut Down" onClick="shutdown()"/> 
+<input type="button" id="startcam"  value="Start Cam" onClick="startcam()"/>  
+<input type="button" id="stopcam"  value="Stop Cam" onClick="stopcam()"/>   
+<img style="-webkit-user-select: none;" src="http://192.168.0.100:8081/">
+</html>
