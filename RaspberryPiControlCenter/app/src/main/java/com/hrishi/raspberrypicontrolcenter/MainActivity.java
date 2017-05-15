@@ -22,6 +22,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,55 +35,27 @@ public class MainActivity extends AppCompatActivity {
 
         final WebView webview = (WebView)findViewById(R.id.webview);
         webview.loadUrl("http://192.168.0.100");
-        final WebView x = (WebView)findViewById(R.id.webViewx);
-        x.loadUrl("http://192.168.0.100:8081/");
-
-        Button startcam = (Button)findViewById(R.id.startcam);
-        Button stopcam = (Button)findViewById(R.id.stopcam);
         Button restart = (Button)findViewById(R.id.rrpi);
         Button shutdown = (Button)findViewById(R.id.shutdown);
-        Button d = (Button)findViewById(R.id.dwn);
+        Button live = (Button)findViewById(R.id.lc);
 
-        d.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view)
-            {
-                Intent intent = new Intent(view.getContext(), download.class);
-                startActivityForResult(intent, 1);
-
-            }
-
-        });
-
-        startcam.setOnClickListener(new View.OnClickListener(){
+        live.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view)
             {
-                webview.loadUrl("http://192.168.0.100/x.php?status=startcam");
-                x.loadUrl("http://192.168.0.100:8081/");
-
+                Intent i = new Intent(getBaseContext(), livecam.class);
+                startActivity(i);
             }
 
         });
-        stopcam.setOnClickListener(new View.OnClickListener(){
 
-            @Override
-            public void onClick(View view)
-            {
-                webview.loadUrl("http://192.168.0.100/x.php?status=stopcam");
-
-            }
-
-        });
         restart.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view)
             {
                 webview.loadUrl("http://192.168.0.100/x.php?status=restart");
-                x.loadUrl("http://192.168.0.100:8081/");
 
             }
 
@@ -93,8 +66,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 webview.loadUrl("http://192.168.0.100/x.php?status=shutdown");
-                x.loadUrl("http://192.168.0.100:8081/");
-
             }
 
         });

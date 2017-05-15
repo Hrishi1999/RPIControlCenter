@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Ads" />
-        <activity android:name=".download"></activity>
+        <activity android:name=".livecam"></activity>
     </application>
 
 </manifest>
